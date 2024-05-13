@@ -1,9 +1,10 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+
 # from accounts.models import User
 
 # getting the User model from the settings.py file
-User = get_user_model()
+# User = get_user_model()
 
 # Create your models here.
 
@@ -14,7 +15,7 @@ class Post(models.Model):
     this is a class to define posts for blog app
     """
     title = models.CharField(max_length=200)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey('accounts.Profile', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images/blog/posts/', null=True, blank=True)
     content = models.TextField()
     status = models.BooleanField(default=False)
