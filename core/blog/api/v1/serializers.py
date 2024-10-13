@@ -1,10 +1,13 @@
 from rest_framework import serializers
 from ...models import Post, Category
 from accounts.models import Profile
+
+
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ['id', 'name']
+
 
 class PostSerializer(serializers.ModelSerializer):
 
@@ -37,6 +40,9 @@ class PostSerializer(serializers.ModelSerializer):
         return rep
 
     def create(self, validated_data):
-        validated_data["author"] = Profile.objects.get(user__id=self.context.get("request").user.id)
+        try:
+            validated_data["author"] = Profile.objects.get(user__id=self.context.get("request").user.id)
+        except Profile.DoesNotExist:
+            raise serializers.ValidationError("Profile for the user does not exist.")
         return super().create(validated_data)
 
