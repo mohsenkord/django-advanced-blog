@@ -1,6 +1,13 @@
+# general modules
 django>5.1,<5.2
 environs[django] == 11.0.0
 pillow
 djangorestframework
+
+# third-party modules
 markdown
 django-filter
+drf-yasg[validation]
+
+# deployment modules
+setuptools

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Add custom permission, Filtering">
+    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Initial integration of Swagger and Redoc for API documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/blog/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/blog/api/v1/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/core/settings.py" afterDir="false" />
@@ -128,7 +128,7 @@
       <workItem from="1728545701461" duration="2170000" />
       <workItem from="1728561679839" duration="1351000" />
       <workItem from="1728644731866" duration="3415000" />
-      <workItem from="1728793842095" duration="7154000" />
+      <workItem from="1728793842095" duration="9313000" />
     </task>
     <task id="LOCAL-00001" summary="Add custom permission, Filtering">
       <option name="closed" value="true" />
@@ -138,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728795969061</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial integration of Swagger and Redoc for API documentation">
+      <option name="closed" value="true" />
+      <created>1728808099502</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728808099502</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add custom permission, Filtering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add custom permission, Filtering" />
+    <MESSAGE value="Initial integration of Swagger and Redoc for API documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial integration of Swagger and Redoc for API documentation" />
   </component>
 </project>
