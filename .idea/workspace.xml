@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/django_advance_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_advance_blog.iml" afterDir="false" />
+    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Implement JWT authentication using SimpleJWT, customizing token structure and settings. Include user verification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/core/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,7 @@
       <workItem from="1729251794576" duration="814000" />
       <workItem from="1729345220537" duration="3991000" />
       <workItem from="1729406235876" duration="7907000" />
-      <workItem from="1729483657186" duration="672000" />
+      <workItem from="1729483657186" duration="2841000" />
     </task>
     <task id="LOCAL-00001" summary="Add custom permission, Filtering">
       <option name="closed" value="true" />
@@ -191,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728980945563</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implement JWT authentication using SimpleJWT, customizing token structure and settings. Include user verification">
+      <option name="closed" value="true" />
+      <created>1729484765005</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729484765005</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +210,7 @@
     <MESSAGE value="Initial setup of API for accounts app" />
     <MESSAGE value="Added registration endpoint to accounts API" />
     <MESSAGE value="Implemented basic authentication token structure for login and logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented basic authentication token structure for login and logout" />
+    <MESSAGE value="Implement JWT authentication using SimpleJWT, customizing token structure and settings. Include user verification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement JWT authentication using SimpleJWT, customizing token structure and settings. Include user verification" />
   </component>
 </project>
