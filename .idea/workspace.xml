@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Create endpoint for profile update and retrieval">
+    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Refactor URL and models structure for improved organization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/models/users.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +139,8 @@
       <workItem from="1729251794576" duration="814000" />
       <workItem from="1729345220537" duration="3991000" />
       <workItem from="1729406235876" duration="7907000" />
-      <workItem from="1729483657186" duration="4080000" />
+      <workItem from="1729483657186" duration="7219000" />
+      <workItem from="1729508203806" duration="1737000" />
     </task>
     <task id="LOCAL-00001" summary="Add custom permission, Filtering">
       <option name="closed" value="true" />
@@ -211,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729492832855</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactor URL and models structure for improved organization">
+      <option name="closed" value="true" />
+      <created>1729494161627</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729494161627</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +237,7 @@
     <MESSAGE value="Implemented basic authentication token structure for login and logout" />
     <MESSAGE value="Implement JWT authentication using SimpleJWT, customizing token structure and settings. Include user verification" />
     <MESSAGE value="Create endpoint for profile update and retrieval" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create endpoint for profile update and retrieval" />
+    <MESSAGE value="Refactor URL and models structure for improved organization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor URL and models structure for improved organization" />
   </component>
 </project>

@@ -1,14 +1,17 @@
-from rest_framework import serializers
 from ...models import User, Profile
 from django.contrib.auth.password_validation import validate_password
 from django.core import exceptions
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError as PasswordValidationError
+from django.contrib.auth import authenticate
+from django.utils.translation import gettext_lazy as _
+from rest_framework import serializers
+
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
     confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
     password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
+
     class Meta:
         model = User
         fields = ('email', 'password', 'confirm_password')
@@ -31,13 +34,9 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         return User.objects.create_user(**validated_data)
 
 
-from django.contrib.auth import authenticate
-from django.utils.translation import gettext_lazy as _
-
-from rest_framework import serializers
-
-
 class CustomAuthTokenSerializer(serializers.Serializer):
+    if not verified:
+        raise serializers.ValidationError({'is_verified': 'New users must be verified upon registration.'})
     email = serializers.CharField(
         label=_("Email"),
         write_only=True
@@ -57,6 +56,10 @@ class CustomAuthTokenSerializer(serializers.Serializer):
         username = attrs.get('email')
         password = attrs.get('password')
 
+        if username is None or password is None:
+            raise serializers.ValidationError(
+                _('Must include "email" and "password".')
+            )
         if username and password:
             user = authenticate(request=self.context.get('request'),
                                 username=username, password=password)
@@ -67,6 +70,9 @@ class CustomAuthTokenSerializer(serializers.Serializer):
             if not user:
                 msg = _('Unable to log in with provided credentials.')
                 raise serializers.ValidationError(msg, code='authorization')
+            if not user.is_verified:
+                raise serializers.ValidationError({'is_verified': 'user is not verified'})
+
         else:
             msg = _('Must include "username" and "password".')
             raise serializers.ValidationError(msg, code='authorization')
@@ -78,6 +84,8 @@ class CustomAuthTokenSerializer(serializers.Serializer):
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
         data = super().validate(attrs)
+        if not self.user.is_verified:
+            raise serializers.ValidationError({'is_verified': 'user is not verified'})
         data['user_id'] = self.user.id
         data['email'] = self.user.email
         return data
