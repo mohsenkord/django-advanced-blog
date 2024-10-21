@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Added registration endpoint to accounts API">
+    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/django_advance_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_advance_blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/urls.py" afterDir="false" />
@@ -130,7 +131,17 @@
       <workItem from="1728644731866" duration="3415000" />
       <workItem from="1728793842095" duration="13291000" />
       <workItem from="1728911397648" duration="5788000" />
-      <workItem from="1728976884410" duration="3966000" />
+      <workItem from="1728976884410" duration="4643000" />
+      <workItem from="1728992663367" duration="2169000" />
+      <workItem from="1729085596770" duration="603000" />
+      <workItem from="1729171414093" duration="1399000" />
+      <workItem from="1729173180641" duration="3162000" />
+      <workItem from="1729224153826" duration="2950000" />
+      <workItem from="1729250960065" duration="3000" />
+      <workItem from="1729251794576" duration="814000" />
+      <workItem from="1729345220537" duration="3991000" />
+      <workItem from="1729406235876" duration="7907000" />
+      <workItem from="1729483657186" duration="672000" />
     </task>
     <task id="LOCAL-00001" summary="Add custom permission, Filtering">
       <option name="closed" value="true" />
@@ -172,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728918649782</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implemented basic authentication token structure for login and logout">
+      <option name="closed" value="true" />
+      <created>1728980945563</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728980945563</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +203,7 @@
     <MESSAGE value="Making some minor changes" />
     <MESSAGE value="Initial setup of API for accounts app" />
     <MESSAGE value="Added registration endpoint to accounts API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added registration endpoint to accounts API" />
+    <MESSAGE value="Implemented basic authentication token structure for login and logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented basic authentication token structure for login and logout" />
   </component>
 </project>
