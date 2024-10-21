@@ -21,4 +21,7 @@ urlpatterns = [
     path('jwt/create/', views.CustomTokenObtainPairView.as_view(), name='token_create'),
     path('jwt/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('jwt/verify/', TokenVerifyView.as_view(), name='token_verify'),
+
+    # profile urls
+    path('profile/', views.ProfileAPIView.as_view(), name='profile'),
 ]
