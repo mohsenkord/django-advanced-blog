@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Refactor URL and models structure for improved organization">
+    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Add a new boolean field named is_verified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/models/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/urls/accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/urls/accounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +141,10 @@
       <workItem from="1729345220537" duration="3991000" />
       <workItem from="1729406235876" duration="7907000" />
       <workItem from="1729483657186" duration="7219000" />
-      <workItem from="1729508203806" duration="1737000" />
+      <workItem from="1729508203806" duration="3960000" />
+      <workItem from="1729583394783" duration="1041000" />
+      <workItem from="1729683944488" duration="2237000" />
+      <workItem from="1729843060693" duration="1515000" />
     </task>
     <task id="LOCAL-00001" summary="Add custom permission, Filtering">
       <option name="closed" value="true" />
@@ -222,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729494161627</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add a new boolean field named is_verified">
+      <option name="closed" value="true" />
+      <created>1729510499216</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1729510499216</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +250,7 @@
     <MESSAGE value="Implement JWT authentication using SimpleJWT, customizing token structure and settings. Include user verification" />
     <MESSAGE value="Create endpoint for profile update and retrieval" />
     <MESSAGE value="Refactor URL and models structure for improved organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor URL and models structure for improved organization" />
+    <MESSAGE value="Add a new boolean field named is_verified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a new boolean field named is_verified" />
   </component>
 </project>

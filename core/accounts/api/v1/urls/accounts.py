@@ -10,6 +10,15 @@ urlpatterns = [
     path('token/login/', views.CustomAuthToken.as_view(), name='login'),
     path('token/logout/', views.CustomDestroyAuthToken.as_view(), name='logout'),
 
+    # send email urls
+    path('send-email/', views.SendEmailView.as_view(), name='send_email'),
+
+    # activation urls
+    # path('activate/<str:uidb64>/<str:token>/', views.activate, name='activate'),
+
+    # resend activation urls
+    # path('resend-activation/', views.ResendActivationView.as_view(), name='resend_activation'),
+
     # change password urls
     path('password/change/', views.ChangePasswordView.as_view(), name='change_password'),
 

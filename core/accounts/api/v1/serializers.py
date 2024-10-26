@@ -35,8 +35,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 
 
 class CustomAuthTokenSerializer(serializers.Serializer):
-    if not verified:
-        raise serializers.ValidationError({'is_verified': 'New users must be verified upon registration.'})
+
     email = serializers.CharField(
         label=_("Email"),
         write_only=True
