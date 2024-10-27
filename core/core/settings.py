@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_yasg',
     'rest_framework_simplejwt',
+    'mail_templated',
 
     # local
     'blog.apps.BlogConfig',
@@ -167,4 +168,3 @@ EMAIL_PORT = 25
 EMAIL_USE_TLS = False
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

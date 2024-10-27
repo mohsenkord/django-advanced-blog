@@ -1,4 +1,3 @@
-from django.core.mail import send_mail
 from rest_framework import generics
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
@@ -13,9 +12,8 @@ from .serializers import (
     ChangePasswordSerializer,ProfileSerializer,
 )
 from django.contrib.auth import get_user_model
-from django.conf import settings
 from ...models import Profile
-
+from mail_templated import send_mail
 User = get_user_model()
 
 
@@ -117,20 +115,5 @@ class SendEmailView(generics.GenericAPIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        send_mail(
-            'Subject Here',
-            'Here is the message.',
-            'another_email@example.com',  # Override sender email
-            ['recipient@example.com'],
-            fail_silently=False,
-        )
+        send_mail('email/hello.tpl', {'user': 'mohsen'}, 'admin@admin.com', ['mohsen@gmail.com'])
         return Response({"message": "Email sent successfully"}, status=status.HTTP_200_OK)
-    """def post(self, request, *args, **kwargs):
-        send_mail(
-            'Subject Here',
-            'Here is the message.',
-            settings.DEFAULT_FROM_EMAIL,
-            [request.user.email],
-            fail_silently=False,
-        )
-        return Response({"message": "Email sent successfully"}, status=status.HTTP_200_OK)"""
