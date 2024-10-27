@@ -1,3 +1,5 @@
+import threading
+
 from rest_framework import generics
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
@@ -13,7 +15,7 @@ from .serializers import (
 )
 from django.contrib.auth import get_user_model
 from ...models import Profile
-from mail_templated import send_mail
+from mail_templated import EmailMessage
 User = get_user_model()
 
 
@@ -111,9 +113,17 @@ class ProfileAPIView(generics.RetrieveUpdateAPIView):
         return obj
 
 
+def send_email(message):
+    message.send()
+
+
 class SendEmailView(generics.GenericAPIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        send_mail('email/hello.tpl', {'user': 'mohsen'}, 'admin@admin.com', ['mohsen@gmail.com'])
+
+        email_obj = EmailMessage('email/hello.tpl', {'user': 'mohsen'}, 'admin@admin.com',
+                               to=['mohsen@gmail.com'])
+        email_thread = threading.Thread(target=send_email, args=(email_obj,))
+        email_thread.start()
         return Response({"message": "Email sent successfully"}, status=status.HTTP_200_OK)
