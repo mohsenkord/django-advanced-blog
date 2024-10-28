@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Installing the Django Mail Templated module and making the necessary settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/urls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/urls/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/urls/accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/urls/accounts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,6 +148,8 @@
       <workItem from="1729954343503" duration="8816000" />
       <workItem from="1730022538821" duration="1249000" />
       <workItem from="1730046993373" duration="1018000" />
+      <workItem from="1730099789379" duration="4278000" />
+      <workItem from="1730106604967" duration="11636000" />
     </task>
     <task id="LOCAL-00001" summary="Add custom permission, Filtering">
       <option name="closed" value="true" />
