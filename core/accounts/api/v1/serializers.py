@@ -1,3 +1,5 @@
+from rest_framework.generics import get_object_or_404
+
 from ...models import User, Profile
 from django.contrib.auth.password_validation import validate_password
 from django.core import exceptions
@@ -126,6 +128,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = ('id', 'first_name', 'last_name', 'email', 'description', 'image')
 
 
+'''
 class ResendActivationSerializer(serializers.Serializer):
     email = serializers.EmailField(required=True)
 
@@ -142,4 +145,19 @@ class ResendActivationSerializer(serializers.Serializer):
                 {"detail": "user is already activated and verified"}
             )
         attrs["user"] = user_obj
-        return super().validate(attrs)
+        return attrs
+'''
+
+
+class ResendActivationSerializer(serializers.Serializer):
+    email = serializers.EmailField(required=True, write_only=True,
+                                   help_text="The email address of the user to resend the activation link.")
+
+    def validate_email(self, value):
+        """Validate that the email is associated with a registered user."""
+        user = get_object_or_404(User, email=value)
+
+        if user.is_verified:
+            raise serializers.ValidationError("This account is already activated.")
+
+        return value
