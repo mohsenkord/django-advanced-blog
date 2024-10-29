@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Implement email sending and resending functionality">
+    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Implement email sending and resending functionality(debug)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/urls/accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/urls/accounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +148,9 @@
       <workItem from="1730022538821" duration="1249000" />
       <workItem from="1730046993373" duration="1018000" />
       <workItem from="1730099789379" duration="4278000" />
-      <workItem from="1730106604967" duration="12245000" />
+      <workItem from="1730106604967" duration="12395000" />
+      <workItem from="1730185003798" duration="4829000" />
+      <workItem from="1730205977331" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Add custom permission, Filtering">
       <option name="closed" value="true" />
@@ -260,7 +264,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730133660279</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Implement email sending and resending functionality(debug)">
+      <option name="closed" value="true" />
+      <created>1730134083339</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730134083339</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Implement email sending and resending functionality(debug)">
+      <option name="closed" value="true" />
+      <created>1730134097927</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1730134097927</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +300,7 @@
     <MESSAGE value="Configured email and integrated smtp4dev" />
     <MESSAGE value="Installing the Django Mail Templated module and making the necessary settings" />
     <MESSAGE value="Implement email sending and resending functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement email sending and resending functionality" />
+    <MESSAGE value="Implement email sending and resending functionality(debug)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement email sending and resending functionality(debug)" />
   </component>
 </project>

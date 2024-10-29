@@ -22,6 +22,11 @@ urlpatterns = [
     # change password urls
     path('password/change/', views.ChangePasswordView.as_view(), name='change_password'),
 
+    # Send password recovery email urls
+    path('password/recovery/', views.PasswordRecoveryAPIView.as_view(), name='password_recovery'),
+    path('password/reset-confirm/<str:token>', views.PasswordResetConfirmAPIView.as_view(), name='password-reset-confirm'),
+
+
     # jwt urls
     path('jwt/create/', views.CustomTokenObtainPairView.as_view(), name='token_create'),
     path('jwt/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

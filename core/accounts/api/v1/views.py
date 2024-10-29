@@ -15,7 +15,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 from .serializers import (
     UserRegistrationSerializer, CustomAuthTokenSerializer, CustomTokenObtainPairSerializer,
-    ChangePasswordSerializer,ProfileSerializer, ResendActivationSerializer,
+    ChangePasswordSerializer, ProfileSerializer, ResendActivationSerializer,
+    PasswordRecoverySerializer,PasswordResetConfirmSerializer,
 )
 from django.contrib.auth import get_user_model
 from ...models import Profile
@@ -43,6 +44,8 @@ class BaseActivationAPIView:
         refresh = RefreshToken.for_user(user)
         return str(refresh.access_token)
 
+    def send_email(self, email_obj):
+        email_obj.send()
 
 class RegisterAPIView(generics.GenericAPIView, BaseActivationAPIView):
     """View for registering new user"""
@@ -183,3 +186,55 @@ class ResendActivationAPIView(generics.GenericAPIView, BaseActivationAPIView):
             return Response({"message": "Activation link sent successfully"}, status=status.HTTP_200_OK)
 
         return Response({"message": "User already activated"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class PasswordRecoveryAPIView(generics.GenericAPIView, BaseActivationAPIView):
+    serializer_class = PasswordRecoverySerializer
+
+    def post(self, request):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        email = serializer.validated_data['email']
+        user = User.objects.get(email=email)
+        self.send_activation_email(user)
+
+        return Response({"message": _("Password recovery link has been sent to your email.")},
+                        status=status.HTTP_200_OK)
+
+    def send_activation_email(self, user):
+        token = self.get_tokens_for_user(user)
+        reset_link = f'http://127.0.0.1:8000/accounts/api/v1/password/reset-confirm/{token}'
+        email_obj = EmailMessage(
+            'email/password_recovery.tpl',
+            {'token': token, 'reset_link': reset_link},
+            'admin@admin.com',
+            to=[user.email]
+        )
+        email_thread = threading.Thread(target=self.send_email, args=(email_obj,))
+        email_thread.start()
+
+
+class PasswordResetConfirmAPIView(generics.GenericAPIView):
+    serializer_class = PasswordResetConfirmSerializer
+
+    def get(self, request, token):
+        # Here you can render a form template or return a response indicating the user should submit a password
+        return Response({"message": _("Please provide your new password.")}, status=status.HTTP_200_OK)
+
+    def post(self, request, token):
+        # Validate the token
+        try:
+            payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+            user = User.objects.get(id=payload['user_id'])
+        except (User.DoesNotExist, Exception):
+            return Response({"message": _("Invalid token.")}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Validate the new password using the serializer
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        # Set the new password
+        user.set_password(serializer.validated_data['password'])
+        user.save()
+
+        return Response({"message": _("Password has been successfully reset.")}, status=status.HTTP_200_OK)

@@ -161,3 +161,35 @@ class ResendActivationSerializer(serializers.Serializer):
             raise serializers.ValidationError("This account is already activated.")
 
         return value
+
+
+class PasswordRecoverySerializer(serializers.Serializer):
+    email = serializers.EmailField(required=True, help_text="The email address of the user requesting password recovery.")
+
+    def validate_email(self, value):
+        """Check if the email is associated with an active user."""
+        user = get_object_or_404(User, email=value)
+        if not user.is_verified:
+            raise serializers.ValidationError("This user account is inactive.")
+        return value
+
+
+class PasswordResetConfirmSerializer(serializers.Serializer):
+    new_password1 = serializers.CharField(style={'input_type': 'password'}, write_only=True, required=True)
+    new_password2 = serializers.CharField(style={'input_type': 'password'}, write_only=True, required=True)
+
+    def validate(self, attrs):
+        new_password = attrs.get('new_password1')
+        new_password1 = attrs.get('new_password2')
+
+        # Check if new passwords match
+        if new_password != new_password1:
+            raise serializers.ValidationError({'new_password': _('New passwords do not match.')})
+
+        # Validate new password
+        try:
+            validate_password(new_password1)
+        except PasswordValidationError as e:
+            raise serializers.ValidationError({'new_password': list(e.messages)})
+
+        return super().validate(attrs)
