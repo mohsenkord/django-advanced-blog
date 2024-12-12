@@ -14,6 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Check Docker and Docker Compose version
+      run: |
+            docker --version
+            docker-compose --version
     - name: Setup Docker-Compose
       run: docker-compose up -d
     - name: Run Tests
