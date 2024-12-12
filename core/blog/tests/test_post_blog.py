@@ -1,5 +1,3 @@
-import datetime
-
 import pytest
 from rest_framework.request import Request
 from rest_framework.test import APIClient, APIRequestFactory
