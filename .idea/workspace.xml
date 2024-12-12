@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Add password recovery and change functionality">
+    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Integrate djoser for user management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/blog/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/blog/api/v1/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/blog/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,23 +58,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/mohsne/PycharmProjects/Professionals_code/advance-blog/django_advance_blog",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mohsne/PycharmProjects/Professionals_code/advance-blog/django_advance_blog&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -153,7 +153,20 @@
       <workItem from="1730099789379" duration="4278000" />
       <workItem from="1730106604967" duration="12395000" />
       <workItem from="1730185003798" duration="4829000" />
-      <workItem from="1730205977331" duration="1570000" />
+      <workItem from="1730205977331" duration="2342000" />
+      <workItem from="1730223792956" duration="690000" />
+      <workItem from="1730270956735" duration="2135000" />
+      <workItem from="1730389450430" duration="608000" />
+      <workItem from="1730489723196" duration="715000" />
+      <workItem from="1730477863609" duration="801000" />
+      <workItem from="1731147623775" duration="603000" />
+      <workItem from="1732357204426" duration="2073000" />
+      <workItem from="1733486963555" duration="2965000" />
+      <workItem from="1733567758308" duration="607000" />
+      <workItem from="1733585441523" duration="3000" />
+      <workItem from="1733751124630" duration="7279000" />
+      <workItem from="1733916501582" duration="8711000" />
+      <workItem from="1733984898763" duration="8775000" />
     </task>
     <task id="LOCAL-00001" summary="Add custom permission, Filtering">
       <option name="closed" value="true" />
@@ -291,11 +304,30 @@
       <option name="project" value="LOCAL" />
       <updated>1730207719106</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Integrate djoser for user management">
+      <option name="closed" value="true" />
+      <created>1730208540194</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1730208540194</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add custom permission, Filtering" />
@@ -313,6 +345,7 @@
     <MESSAGE value="Implement email sending and resending functionality" />
     <MESSAGE value="Implement email sending and resending functionality(debug)" />
     <MESSAGE value="Add password recovery and change functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add password recovery and change functionality" />
+    <MESSAGE value="Integrate djoser for user management" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrate djoser for user management" />
   </component>
 </project>
