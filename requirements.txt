@@ -13,6 +13,7 @@ django-mail-templated
 djoser
 pytest
 pytest-django
+python-decouple
 
 # deployment modules
 setuptools
