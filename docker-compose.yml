@@ -10,9 +10,9 @@ services:
         ports:
             - "8000:8000"
         environment:
-            - "DEBUG=True"
-            - "SECRET_KEY=django-insecure-z#my$^s08vdr+e8^p(o(-bk=0b=m7-83il5mm&uf(xpznq%tmf"
-            - "ALLOWED_HOSTS=*"
+             - DEBUG=True
+             - SECRET_KEY="django-insecure-z#my$^s08vdr+e8^p(o(-bk=0b=m7-83il5mm&uf(xpznq%tmf"
+             - ALLOWED_HOSTS=*
 #            - "EMAIL_HOST_USER=None"
 #            - "EMAIL_HOST_PASSWORD=None"
 
