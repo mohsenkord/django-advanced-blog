@@ -11,7 +11,7 @@ services:
             - "8000:8000"
         environment:
             - "DEBUG=True"
-            - "SECRET_KEY=\!8t3pm\*2g4hcvdd\%\!e\$8\#k\&cvps0arryj\&z0\)\^\-\&4ug6\!h52j\*"
+            - SECRET_KEY=!8t3pm*2g4hcvdd%!e$8#k&cvps0arryj&z0)^-&4ug6!h52j*
             - "ALLOWED_HOSTS=*"
 #            - "EMAIL_HOST_USER=None"
 #            - "EMAIL_HOST_PASSWORD=None"
