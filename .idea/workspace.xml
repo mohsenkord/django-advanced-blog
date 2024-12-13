@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Updated dependencies" />
+    <list default="true" id="31c6291a-4332-46fb-9007-69f96d45da8b" name="Changes" comment="Updated dependencies 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +27,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="KEEP" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -311,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730208540194</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updated dependencies 2">
+      <option name="closed" value="true" />
+      <created>1734030566967</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1734030566967</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +355,8 @@
     <MESSAGE value="Implement email sending and resending functionality(debug)" />
     <MESSAGE value="Add password recovery and change functionality" />
     <MESSAGE value="Integrate djoser for user management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrate djoser for user management" />
+    <MESSAGE value="Updated dependencies 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated dependencies 2" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [
