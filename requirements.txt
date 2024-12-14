@@ -11,9 +11,12 @@ drf-yasg[validation]
 djangorestframework-simplejwt
 django-mail-templated
 djoser
-pytest
-pytest-django
 python-decouple
 
 # deployment modules
 setuptools
+
+# refactoring and tests
+Faker
+pytest
+pytest-django
